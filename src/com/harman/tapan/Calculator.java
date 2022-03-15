@@ -2,13 +2,10 @@ package com.harman.tapan;
 
 import java.util.Scanner;
 
-public class Calculator {
+public class Calculator extends ParentCalculator{
 
     public static void main(String[] args) {
-        Addition adcalc = new Addition(); //Creating Object
-        Subtraction subcalc = new Subtraction();
-        Multiplication multc  = new Multiplication();
-        Division divcalc = new Division();
+       Calculator obj = new Calculator();
 
         int n1,n2,result;
         Scanner input = new Scanner(System.in);
@@ -18,10 +15,10 @@ public class Calculator {
         System.out.println("Enter num2: ");
         n2 = input.nextInt();
 
-        int result1 = adcalc.AddOperation(n1, n2);
-        int result2 = subcalc.SubOperation(n1, n2);
-        int result3 = multc.MultOperation(n1, n2);
-        int result4 = divcalc.DivOperation(n1, n2);
+        int result1 = obj.AddOperation(n1, n2);
+        int result2 = obj.SubOperation(n1, n2);
+        int result3 = obj.MultOperation(n1, n2);
+        int result4 = obj.DivOperation(n1, n2);
 
         System.out.println("Addition is : "+ result1);
         System.out.println("Subtraction is: "+ result2);
